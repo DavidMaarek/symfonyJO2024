@@ -5,6 +5,9 @@ namespace DavidBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
+/**
+ * @Route("/david")
+ */
 class DefaultController extends Controller
 {
     /**
