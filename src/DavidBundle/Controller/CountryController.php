@@ -5,16 +5,13 @@ namespace DavidBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
-/**
- * @Route("/david")
- */
-class DefaultController extends Controller
+class CountryController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/country")
      */
     public function indexAction()
     {
-        return $this->render('DavidBundle:Default:index.html.twig');
+        return $this->render('DavidBundle:Country:index.html.twig');
     }
 }
