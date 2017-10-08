@@ -3,6 +3,7 @@
 namespace DavidBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Country
@@ -25,6 +26,7 @@ class Country
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
+     * @Assert\NotBlank(message = "country.name.not_blank")
      */
     private $name;
 
@@ -32,6 +34,12 @@ class Country
      * @var string
      *
      * @ORM\Column(name="flag", type="string")
+     *
+     * @Assert\NotBlank(message = "country.flag.not_blank")
+     * @Assert\Image(
+     *     mimeTypes = {"image/jpg", "image/jpeg", "image/png"},
+     *     mimeTypesMessage = "country.flag.filetype"
+     * )
      */
     private $flag;
 

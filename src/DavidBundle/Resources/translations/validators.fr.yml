@@ -1,0 +1,3 @@
+country.name.not_blank: Vous devez renseigner un nom
+country.flag.not_blank: Vous devez télécharger un drapeau
+country.flag.filetype: Vous devez télécharger une image au format JPG, JPEG ou PNG

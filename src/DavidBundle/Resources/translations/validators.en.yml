@@ -1,0 +1,3 @@
+country.name.not_blank: You must fill in a name
+country.flag.not_blank: You must download a flag
+country.flag.filetype: You must upload an image in JPG, JPEG or PNG format

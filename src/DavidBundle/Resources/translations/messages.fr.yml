@@ -1,0 +1,10 @@
+country.title: Pays
+country.addcountry: Ajouter un pays
+country.form.label.name: Nom du pays
+country.form.label.downloadFlag: Télécharger un drapeau
+country.form.submit: Ajouter
+country.noCountry: Il n'y a pas de pays
+country.thead.flag: Drapeau
+country.thead.country: Pays
+country.thead.modify: Modifier
+country.thead.delete: Supprimer
