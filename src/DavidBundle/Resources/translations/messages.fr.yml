@@ -1,6 +1,17 @@
+flash.error: Problème lors de l'enregistrement, veuillez vous référer au(x) erreur(s) en rouge sous les champs
+
+flash.success.addCountry: Pays correctement ajouté
+flash.success.editCountry: Pays correctement modifié
+flash.success.deleteCountry: Pays correctement supprimé
+
+flash.success.addDiscipline: Discipline correctement ajoutée
+flash.success.editDiscipline: Discipline correctement modifiée
+flash.success.deleteDiscipline: Discipline correctement supprimée
+
 generic.thead.modify: Modifier
 generic.thead.delete: Supprimer
 generic.form.submit.add: Ajouter
+generic.form.submit.modify: Modifier
 
 base.nav.countries: Pays
 base.nav.disciplines: Disciplines
@@ -19,7 +30,22 @@ editCountry.title: Modifier un pays
 editCountry.form.submit: Modifier
 
 discipline.title: Discipline
+discipline.label.name: Nom
 discipline.noDiscipline: Il n'y a pas encore de discipline
 discipline.thead.name: Nom de la discipline
 discipline.form.title: Ajouter une discipline
 discipline.thead.athletesNumber: Nombre d'athlete(s)
+
+editDiscipline.title: Modifier une discipline
+
+athlete.title: Athlete
+athlete.form.title: Ajouter un athlete
+athlete.label.name: Nom
+athlete.label.firstName: Prénom
+athlete.label.birthDate: Date de naissance
+athlete.label.picture: Photo de profil
+athlete.label.country: Pays
+athlete.placeholder.country: Sélectionnez un pays
+athlete.label.discipline: Discipline
+athlete.placeholder.discipline: Sélectionnez une discipline
+athlete.noAthlete: Il n'y a pas encore d'athlete

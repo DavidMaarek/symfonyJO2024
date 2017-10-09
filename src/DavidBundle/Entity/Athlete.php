@@ -3,6 +3,7 @@
 namespace DavidBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Athlete
@@ -25,6 +26,7 @@ class Athlete
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=100)
+     * @Assert\NotBlank(message = "athlete.name.not_blank")
      */
     private $name;
 
@@ -32,6 +34,7 @@ class Athlete
      * @var string
      *
      * @ORM\Column(name="first_name", type="string", length=100)
+     * @Assert\NotBlank(message = "athlete.firstName.not_blank")
      */
     private $firstName;
 
@@ -39,6 +42,7 @@ class Athlete
      * @var \DateTime
      *
      * @ORM\Column(name="birth_date", type="datetime")
+     * @Assert\NotBlank(message = "athlete.birthdate.not_blank")
      */
     private $birthDate;
 
@@ -46,6 +50,11 @@ class Athlete
      * @var string
      *
      * @ORM\Column(name="picture", type="string", unique=true)
+     * @Assert\NotBlank(message = "athlete.picture.not_blank")
+     * @Assert\Image(
+     *     mimeTypes = {"image/jpg", "image/jpeg", "image/png"},
+     *     mimeTypesMessage = "athlete.picture.filetype"
+     * )
      */
     private $picture;
 
@@ -53,12 +62,14 @@ class Athlete
     /**
      * @ORM\ManyToOne(targetEntity="DavidBundle\Entity\Country", inversedBy="athletes")
      * @ORM\JoinColumn(name="country_id", referencedColumnName="id")
+     * @Assert\NotBlank(message = "athlete.country.not_blank")
      */
     private $country;
 
     /**
      * @ORM\ManyToOne(targetEntity="DavidBundle\Entity\Discipline", inversedBy="athletes")
      * @ORM\JoinColumn(name="discipline_id", referencedColumnName="id")
+     * @Assert\NotBlank(message = "athlete.discipline.not_blank")
      */
     private $discipline;
 

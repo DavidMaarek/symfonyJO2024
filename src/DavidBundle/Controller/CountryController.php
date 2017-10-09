@@ -6,6 +6,7 @@ use DavidBundle\Entity\Country;
 use DavidBundle\Form\CountryType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpFoundation\Request;
 
 class CountryController extends Controller
@@ -32,7 +33,12 @@ class CountryController extends Controller
 
             $em->persist($country);
             $em->flush();
-            $this->addFlash('success', 'Pays enregistré');
+            $this->addFlash('success', $this->get('translator')->trans('flash.success.addCountry'));
+
+            return $this->redirectToRoute('country_list_add');
+
+        }elseif($form->isSubmitted() && !$form->isValid()){
+            $this->addFlash('error', $this->get('translator')->trans('flash.error'));
         }
 
         $countries = $em->getRepository('DavidBundle:Country')->findAll();
@@ -57,17 +63,24 @@ class CountryController extends Controller
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-            $flag = $country->getFlag();
-            $fileName = md5(uniqid()).'.'.$flag->guessExtension();
-            $flag->move(
-                $this->getParameter('flags_directory'), $fileName
-            );
+                //Il faudrait supprimer l'ancien drapeau qui ne servira plus
 
-            $country->setFlag($fileName);
+                $flag = $country->getFlag();
+                $fileName = md5(uniqid()).'.'.$flag->guessExtension();
+                $flag->move(
+                    $this->getParameter('flags_directory'), $fileName
+                );
 
-            $em->flush();
+                $country->setFlag($fileName);
 
-            $this->addFlash('success', $this->get('translator')->trans('flash.success.editCountry'));
+                $em->flush();
+
+                $this->addFlash('success', $this->get('translator')->trans('flash.success.editCountry'));
+
+                return $this->redirectToRoute('country_list_add');
+
+        }elseif($form->isSubmitted() && !$form->isValid()){
+            $this->addFlash('error', $this->get('translator')->trans('flash.error'));
         }
 
         return $this->render(
@@ -84,6 +97,8 @@ class CountryController extends Controller
     public function delete(Country $country)
     {
         $em = $this->getDoctrine()->getManager();
+        $fs = new Filesystem();
+        $fs->remove($this->getParameter('flags_directory').'/'.$country->getFlag());
         $em->remove($country);
         $em->flush();
         $this->addFlash('success', $this->get('translator')->trans('flash.success.deleteCountry'));

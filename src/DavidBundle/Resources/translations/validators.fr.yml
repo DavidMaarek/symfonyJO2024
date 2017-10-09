@@ -1,3 +1,13 @@
 country.name.not_blank: Vous devez renseigner un nom
 country.flag.not_blank: Vous devez télécharger un drapeau
 country.flag.filetype: Vous devez télécharger une image au format JPG, JPEG ou PNG
+
+discipline.name.not_blank: Vous devez renseigner un nom
+
+athlete.name.not_blank: Vous devez renseigner un nom
+athlete.firstName.not_blank: Vous devez renseigner un prènom
+athlete.birthdate.not_blank: Vous devez renseigner une date de naissance
+athlete.picture.not_blank: Vous devez télécharger une photo de profil
+athlete.picture.filetype: Vous devez télécharger une image au format JPG, JPEG ou PNG
+athlete.country.not_blank: Vous devez renseigner un pays
+athlete.discipline.not_blank: Vous devez renseigner une discipline

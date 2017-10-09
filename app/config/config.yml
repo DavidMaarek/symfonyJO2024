@@ -9,6 +9,7 @@ imports:
 parameters:
     locale: fr
     flags_directory: '%kernel.project_dir%/web/uploads/flags'
+    profil_pictures_directory: '%kernel.project_dir%/web/uploads/profil_pictures'
 
 framework:
     #esi: ~
@@ -39,6 +40,8 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    form_themes:
+        - 'DavidBundle:Form:form_div_layout.html.twig'
 
 # Doctrine Configuration
 doctrine:

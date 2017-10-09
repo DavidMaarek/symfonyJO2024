@@ -24,7 +24,11 @@ class DisciplineController extends Controller
         if($form->isSubmitted() && $form->isValid()){
             $em->persist($discipline);
             $em->flush();
-            $this->addFlash('success', 'Discipline enregistrée');
+            $this->addFlash('success', $this->get('translator')->trans('flash.success.addDiscipline'));
+
+            return $this->redirectToRoute('discipline_list_add');
+        }elseif($form->isSubmitted() && !$form->isValid()){
+            $this->addFlash('error', $this->get('translator')->trans('flash.error'));
         }
 
         $disciplines = $em->getRepository('DavidBundle:Discipline')->findAll();
@@ -52,7 +56,9 @@ class DisciplineController extends Controller
         if($form->isSubmitted() && $form->isValid()){
             $em->flush();
             $this->addFlash('success', $this->get('translator')->trans('flash.success.editDiscipline'));
-            $this->redirectToRoute('discipline_list_add');
+            return $this->redirectToRoute('discipline_list_add');
+        }elseif($form->isSubmitted() && !$form->isValid()){
+            $this->addFlash('error', $this->get('translator')->trans('flash.error'));
         }
 
         return $this->render(

@@ -3,6 +3,8 @@
 namespace DavidBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * Discipline
@@ -25,11 +27,12 @@ class Discipline
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
+     * @Assert\NotBlank(message = "discipline.name.not_blank")
      */
     private $name;
 
     /**
-     * @ORM\OneToMany(targetEntity="DavidBundle\Entity\Athlete", mappedBy="discipline")
+     * @ORM\OneToMany(targetEntity="DavidBundle\Entity\Athlete", mappedBy="discipline", orphanRemoval=true)
      */
     private $athletes;
 
