@@ -1,10 +1,10 @@
 {% extends 'DavidBundle::base.html.twig' %}
 
-{% block title %}{% trans %}editCountry.title{% endtrans %}{% endblock %}
+{% block title %}{% trans %}editDiscipline.title{% endtrans %}{% endblock %}
 
 {% block body %}
     <div class="country">
-        <h1 class="text-center">{% trans %}editCountry.title{% endtrans %}</h1>
+        <h1 class="text-center">{% trans %}editDiscipline.title{% endtrans %}</h1>
 
         <div class="row">
             <div class="col-md-5">
@@ -14,12 +14,7 @@
                     {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
                     {{ form_errors(form.name) }}
                 </div>
-                <div class="form-group">
-                    {{ form_label(form.flag) }}
-                    {{ form_widget(form.flag) }}
-                    {{ form_errors(form.flag) }}
-                </div>
-                <button type="submit" class="btn btn-primary">{% trans %}editCountry.form.submit{% endtrans %}</button>
+                <button type="submit" class="btn btn-primary">{% trans %}generic.form.submit.modify{% endtrans %}</button>
                 {{ form_end(form) }}
             </div>
         </div>

@@ -1,10 +1,25 @@
+generic.thead.modify: Modifier
+generic.thead.delete: Supprimer
+generic.form.submit.add: Ajouter
+
+base.nav.countries: Pays
+base.nav.disciplines: Disciplines
+base.nav.athletes: Athletes
+
 country.title: Pays
-country.addcountry: Ajouter un pays
+country.form.title: Ajouter un pays
 country.form.label.name: Nom du pays
 country.form.label.downloadFlag: Télécharger un drapeau
 country.form.submit: Ajouter
-country.noCountry: Il n'y a pas de pays
+country.noCountry: Il n'y a pas encore de pays
 country.thead.flag: Drapeau
 country.thead.country: Pays
-country.thead.modify: Modifier
-country.thead.delete: Supprimer
+
+editCountry.title: Modifier un pays
+editCountry.form.submit: Modifier
+
+discipline.title: Discipline
+discipline.noDiscipline: Il n'y a pas encore de discipline
+discipline.thead.name: Nom de la discipline
+discipline.form.title: Ajouter une discipline
+discipline.thead.athletesNumber: Nombre d'athlete(s)

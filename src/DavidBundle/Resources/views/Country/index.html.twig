@@ -8,7 +8,7 @@
 
         <div class="row">
             <div class="col-md-5">
-                <h3>{% trans %}country.addcountry{% endtrans %}</h3>
+                <h3>{% trans %}country.form.title{% endtrans %}</h3>
 
                 {{ form_start(form) }}
                     <div class="form-group">
@@ -21,7 +21,7 @@
                         {{ form_widget(form.flag) }}
                         {{ form_errors(form.flag) }}
                     </div>
-                    <button type="submit" class="btn btn-primary">{% trans %}country.form.submit{% endtrans %}</button>
+                    <button type="submit" class="btn btn-primary">{% trans %}generic.form.submit.add{% endtrans %}</button>
                 {{ form_end(form) }}
             </div>
 
@@ -36,8 +36,8 @@
                         <tr>
                             <td>{% trans %}country.thead.flag{% endtrans %}</td>
                             <td>{% trans %}country.thead.country{% endtrans %}</td>
-                            <td>{% trans %}country.thead.modify{% endtrans %}</td>
-                            <td>{% trans %}country.thead.delete{% endtrans %}</td>
+                            <td>{% trans %}generic.thead.modify{% endtrans %}</td>
+                            <td>{% trans %}generic.thead.delete{% endtrans %}</td>
                         </tr>
                         </thead>
                         <tbody>
