@@ -1,3 +1,14 @@
-country.name.not_blank: You must fill in a name
+country.name.not_blank: You must enter a name
 country.flag.not_blank: You must download a flag
-country.flag.filetype: You must upload an image in JPG, JPEG or PNG format
+country.flag.maxSize: Your image should not exceed 3MB
+country.flag.filetype: You need to upload a picture in JPG, JPEG or PNG format
+
+discipline.name.not_blank: You must enter a name
+
+athlete.name.not_blank: You must enter a name
+athlete.firstName.not_blank: You must enter a first name
+athlete.birthdate.not_blank: You must enter a date of birth
+athlete.picture.not_blank: You need to upload a profile picture
+athlete.picture.filetype: You need to upload a picture in JPG, JPEG or PNG format
+athlete.country.not_blank: You need to fill in a country
+athlete.discipline.not_blank: You must inform a discipline

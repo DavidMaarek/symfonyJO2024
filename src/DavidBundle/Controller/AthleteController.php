@@ -32,7 +32,11 @@ class AthleteController extends Controller
 
             $em->persist($athlete);
             $em->flush();
-            $this->addFlash('success', 'Athlete enregistré');
+            $this->addFlash('success', $this->get('translator')->trans('flash.success.addAthlete'));
+
+            return $this->redirectToRoute('athlete_list_add');
+        }elseif($form->isSubmitted() && !$form->isValid()){
+            $this->addFlash('error', $this->get('translator')->trans('flash.error'));
         }
 
         $athletes = $em->getRepository('DavidBundle:Athlete')->findAll();
@@ -71,6 +75,8 @@ class AthleteController extends Controller
             $this->addFlash('success', $this->get('translator')->trans('flash.success.editAthlete'));
 
             return $this->redirectToRoute('athlete_list_add');
+        }elseif($form->isSubmitted() && !$form->isValid()){
+            $this->addFlash('error', $this->get('translator')->trans('flash.error'));
         }
 
         return $this->render(

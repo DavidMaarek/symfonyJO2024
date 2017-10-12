@@ -1,2 +1,55 @@
+flash.error: Problem when recording, please refer to the red error (s) under the fields
+
+flash.success.addCountry: Country correctly added
+flash.success.editCountry: Country correctly modified
+flash.success.deleteCountry: Country correctly deleted
+
+flash.success.addDiscipline: Discipline properly added
+flash.success.editDiscipline: Discipline correctly modified
+flash.success.deleteDiscipline: Discipline correctly removed
+
+flash.success.addAthlete: Athlete properly added
+flash.success.editAthlete: Athlete properly modified
+flash.success.deleteAthlete: Athlete correctly deleted
+
+generic.thead.modify: Edit
+generic.thead.delete: Remove
+generic.form.submit.add: Add
+generic.form.submit.modify: Edit
+
+base.nav.countries: Countries
+base.nav.disciplines: Disciplines
+base.nav.athletes: Athletes
+
 country.title: Countries
-country.addcountry: Add country
+country.form.title: Add country
+country.form.label.name: Country Name
+country.form.label.downloadFlag: Download Flag
+country.form.submit: Add
+country.noCountry: There is no country yet
+country.thead.flag: Flag
+country.thead.country: Country
+
+editCountry.title: Edit a country
+editCountry.form.submit: Edit
+
+discipline.title: Discipline
+discipline.label.name: name
+discipline.noDiscipline: There is no discipline yet
+discipline.thead.name: Discipline Name
+discipline.form.title: Add discipline
+discipline.thead.athletesNumber: Number of athlete(s)
+
+editDiscipline.title: Edit a Discipline
+
+athlete.title: Athlete
+athlete.form.title: Add an athlete
+athlete.label.name: Name
+athlete.label.firstName: First Name
+athlete.label.birthDate: Date of birth
+athlete.label.picture: Profile photo
+athlete.label.country: Country
+athlete.placeholder.country: Select country
+athlete.label.discipline: Discipline
+athlete.placeholder.discipline: Select a discipline
+athlete.noAthlete: There are no athletes yet

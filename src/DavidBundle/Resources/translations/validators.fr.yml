@@ -1,5 +1,6 @@
 country.name.not_blank: Vous devez renseigner un nom
 country.flag.not_blank: Vous devez télécharger un drapeau
+country.flag.maxSize: Votre image ne doit pas dépasser 3Mo
 country.flag.filetype: Vous devez télécharger une image au format JPG, JPEG ou PNG
 
 discipline.name.not_blank: Vous devez renseigner un nom

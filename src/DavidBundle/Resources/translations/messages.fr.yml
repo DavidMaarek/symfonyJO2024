@@ -8,6 +8,10 @@ flash.success.addDiscipline: Discipline correctement ajoutée
 flash.success.editDiscipline: Discipline correctement modifiée
 flash.success.deleteDiscipline: Discipline correctement supprimée
 
+flash.success.addAthlete: Athlete correctement ajouté
+flash.success.editAthlete: Athlete correctement modifié
+flash.success.deleteAthlete: Athlete correctement supprimé
+
 generic.thead.modify: Modifier
 generic.thead.delete: Supprimer
 generic.form.submit.add: Ajouter
