@@ -45,7 +45,7 @@ class Country
 
 
     /**
-     * @ORM\OneToMany(targetEntity="DavidBundle\Entity\Athlete", mappedBy="country")
+     * @ORM\OneToMany(targetEntity="DavidBundle\Entity\Athlete", mappedBy="country", orphanRemoval=true)
      */
     private $athletes;
 

@@ -43,13 +43,20 @@ discipline.thead.athletesNumber: Number of athlete(s)
 editDiscipline.title: Edit a Discipline
 
 athlete.title: Athlete
+athlete.noAthlete: There are no athletes yet
 athlete.form.title: Add an athlete
 athlete.label.name: Name
 athlete.label.firstName: First Name
 athlete.label.birthDate: Date of birth
-athlete.label.picture: Profile photo
+athlete.label.picture: Profile picture
 athlete.label.country: Country
 athlete.placeholder.country: Select country
 athlete.label.discipline: Discipline
 athlete.placeholder.discipline: Select a discipline
-athlete.noAthlete: There are no athletes yet
+athlete.thead.name: Name
+athlete.thead.firstName: First name
+athlete.thead.birthDate: Date of birth
+athlete.thead.profilPicture: Profile picture
+athlete.thead.country: Country
+athlete.thead.discipline: Discipline
+athlete.alt.profilPicture: Profil picture of

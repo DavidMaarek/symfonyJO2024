@@ -43,6 +43,7 @@ discipline.thead.athletesNumber: Nombre d'athlete(s)
 editDiscipline.title: Modifier une discipline
 
 athlete.title: Athlete
+athlete.noAthlete: Il n'y a pas encore d'athlete
 athlete.form.title: Ajouter un athlete
 athlete.label.name: Nom
 athlete.label.firstName: Prénom
@@ -52,4 +53,10 @@ athlete.label.country: Pays
 athlete.placeholder.country: Sélectionnez un pays
 athlete.label.discipline: Discipline
 athlete.placeholder.discipline: Sélectionnez une discipline
-athlete.noAthlete: Il n'y a pas encore d'athlete
+athlete.thead.name: Nom
+athlete.thead.firstName: Prénom
+athlete.thead.birthDate: Date de naissance
+athlete.thead.profilPicture: Photo de profil
+athlete.thead.country: Pays
+athlete.thead.discipline: Discipline
+athlete.alt.profilPicture: Photo de profil de
