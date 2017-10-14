@@ -16,6 +16,9 @@ generic.thead.modify: Modifier
 generic.thead.delete: Supprimer
 generic.form.submit.add: Ajouter
 generic.form.submit.modify: Modifier
+generic.form.birthDate.day: Jour
+generic.form.birthDate.month: Mois
+generic.form.birthDate.year: Année
 
 base.nav.countries: Pays
 base.nav.disciplines: Disciplines

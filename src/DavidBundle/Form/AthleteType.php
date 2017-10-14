@@ -26,7 +26,12 @@ class AthleteType extends AbstractType
             ])
             ->add('birthDate', DateType::class, [
                 'label' => 'athlete.label.birthDate',
-                'years' => range(1950,2017)
+                'years' => range(2017,1950),
+                'placeholder' => [
+                    'day' => 'generic.form.birthDate.day',
+                    'month' => 'generic.form.birthDate.month',
+                    'year' => 'generic.form.birthDate.year',
+                ]
             ])
             ->add('picture', FileType::class, [
                 'label' => 'athlete.label.picture',

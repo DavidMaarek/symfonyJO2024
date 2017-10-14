@@ -2,6 +2,20 @@
 
 {% block title %}{% trans %}athlete.title{% endtrans %}{% endblock %}
 
+{% block style %}
+    <style>
+        .birthDate select{
+            width: 30%;
+        }
+
+        .birthDate .selectsContainer{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    </style>
+{% endblock %}
+
 {% block body %}
     <div class="country">
         <h1 class="text-center">{% trans %}athlete.title{% endtrans %}</h1>
@@ -21,9 +35,13 @@
                     {{ form_widget(form.firstName, {'attr': {'class': 'form-control'}}) }}
                     {{ form_errors(form.firstName) }}
                 </div>
-                <div class="form-group">
+                <div class="form-group birthDate">
                     {{ form_label(form.birthDate) }}
-                    {{ form_widget(form.birthDate) }}
+                    <div class="selectsContainer">
+                        {{ form_widget(form.birthDate.day, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_widget(form.birthDate.month, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_widget(form.birthDate.year, {'attr': {'class': 'form-control'}}) }}
+                    </div>
                     {{ form_errors(form.birthDate) }}
                 </div>
                 <div class="form-group">
