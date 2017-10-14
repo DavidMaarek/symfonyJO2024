@@ -1,4 +1,4 @@
-JO2024
+Projet scolaire Symfony 3
 ======
 
 ## Consignes
