@@ -2,7 +2,3 @@ david:
     resource: "@DavidBundle/Controller/"
     type:     annotation
     prefix:   /david
-
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
