@@ -63,3 +63,9 @@ athlete.thead.profilPicture: Photo de profil
 athlete.thead.country: Pays
 athlete.thead.discipline: Discipline
 athlete.alt.profilPicture: Photo de profil de
+
+city.title: Villes
+city.noCity: Il n'y a pas encore de ville
+city.thead.name: Nom
+city.form.title: Ajouter une ville
+city.label.name: Nom

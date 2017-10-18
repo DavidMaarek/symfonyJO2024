@@ -1,0 +1,95 @@
+{% extends 'DavidBundle::base.html.twig' %}
+
+{% block title %}{% trans %}city.title{% endtrans %}{% endblock %}
+
+{% block body %}
+    <div class="country">
+        <h1 class="text-center">{% trans %}city.title{% endtrans %}</h1>
+
+        <div class="row container-success-message" style="display: none">
+            <div class="col-md-6 col-md-push-3">
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <span class="success-message"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+                <h3>{% trans %}city.form.title{% endtrans %}</h3>
+
+                <div class="injectForm"></div>
+            </div>
+
+            <div class="col-md-6 col-md-push-1">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <td>{% trans %}city.thead.name{% endtrans %}</td>
+                        <td>{% trans %}generic.thead.modify{% endtrans %}</td>
+                        <td>{% trans %}generic.thead.delete{% endtrans %}</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% if cities is empty %}
+                        <tr class="tr_no_city">
+                            <td colspan="3">
+                                <div class="alert alert-danger" role="alert">
+                                    {% trans %}city.noCity{% endtrans %}
+                                </div>
+                            </td>
+                        </tr>
+                    {% else %}
+                        {% for city in cities %}
+                            <tr>
+                                <td>{{ city.name|capitalize }}</td>
+                                <td><a href="{{ path('discipline_edit', {"id": city.id}) }}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></td>
+                                <td><a href="{{ path('discipline_delete', {"id": city.id}) }}"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript">
+        $('body').on('submit', 'form', function(e){
+            e.preventDefault();
+            $.ajax({
+                url: '{{ path("city_add") }}',
+                type: 'POST',
+                dataType: "json",
+                data: $('form').serialize(),
+                success: function (result) {
+                    console.log(result);
+                    $("tbody").append(
+                        "<tr>"+
+                            "<td>"+result.name+"</td>"+
+                            "<td><a href=\"\"><span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\"></span></a></td>"+
+                            "<td><a href=\"\"><span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></a></td>"+
+                        "</tr>" );
+                    $(".success-message").html("ca marche");
+                    $('.container-success-message').show();
+                    $('.tr_no_city').hide();
+                },
+                error: function (result) {
+                    console.log(result.responseJSON);
+                    $('.error-message').html(result.responseJSON);
+                }
+            });
+        });
+
+        $.ajax({
+            url: "{{ path('city_form', {'id': null }) }}",
+            type: 'GET',
+            success: function (result) {
+                $(".injectForm").html(result);
+            }
+        });
+    </script>
+{% endblock %}

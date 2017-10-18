@@ -12,3 +12,5 @@ athlete.picture.not_blank: You need to upload a profile picture
 athlete.picture.filetype: You need to upload a picture in JPG, JPEG or PNG format
 athlete.country.not_blank: You need to fill in a country
 athlete.discipline.not_blank: You must inform a discipline
+
+city.name.not_blank: You must enter a name

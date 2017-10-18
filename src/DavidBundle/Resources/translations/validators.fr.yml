@@ -12,3 +12,5 @@ athlete.picture.not_blank: Vous devez télécharger une photo de profil
 athlete.picture.filetype: Vous devez télécharger une image au format JPG, JPEG ou PNG
 athlete.country.not_blank: Vous devez renseigner un pays
 athlete.discipline.not_blank: Vous devez renseigner une discipline
+
+city.name.not_blank: Vous devez renseigner un nom

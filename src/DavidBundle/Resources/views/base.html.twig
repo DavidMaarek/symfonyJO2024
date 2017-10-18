@@ -14,6 +14,7 @@
                 <li><a href="{{ path('country_list_add') }}">Pays</a></li>
                 <li><a href="{{ path('discipline_list_add') }}">Disciplines</a></li>
                 <li><a href="{{ path('athlete_list_add') }}">Athletes</a></li>
+                <li><a href="{{ path('city') }}">Villes</a></li>
             </ul>
         </div>
     </nav>
@@ -43,7 +44,8 @@
 
         {% block body %}{% endblock %}
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {% block script %}{% endblock %}
 </body>
 </html>
