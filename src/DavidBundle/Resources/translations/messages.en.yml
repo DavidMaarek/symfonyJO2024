@@ -12,6 +12,10 @@ flash.success.addAthlete: Athlete properly added
 flash.success.editAthlete: Athlete properly modified
 flash.success.deleteAthlete: Athlete correctly deleted
 
+flash.success.addCity: City properly added
+flash.success.editCity: City correctly modified
+flash.success.deleteCity: City correctly removed
+
 generic.thead.modify: Edit
 generic.thead.delete: Remove
 generic.form.submit.add: Add
@@ -69,3 +73,5 @@ city.noCity: There are no city yet
 city.thead.name: Name
 city.form.title: Add city
 city.label.name: Name
+
+confirm.suppression: Click to confirm delete

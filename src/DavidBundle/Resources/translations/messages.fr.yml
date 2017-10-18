@@ -12,6 +12,10 @@ flash.success.addAthlete: Athlete correctement ajouté
 flash.success.editAthlete: Athlete correctement modifié
 flash.success.deleteAthlete: Athlete correctement supprimé
 
+flash.success.addCity: Ville correctement ajoutée
+flash.success.editCity: Ville correctement modifiée
+flash.success.deleteCity: Ville correctement supprimée
+
 generic.thead.modify: Modifier
 generic.thead.delete: Supprimer
 generic.form.submit.add: Ajouter
@@ -69,3 +73,5 @@ city.noCity: Il n'y a pas encore de ville
 city.thead.name: Nom
 city.form.title: Ajouter une ville
 city.label.name: Nom
+
+confirm.suppression: Cliquez pour confirmer la suppression

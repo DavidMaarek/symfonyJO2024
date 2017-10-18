@@ -8,8 +8,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Serializer\SerializerInterface;
 
 class CityController extends Controller
 {
@@ -43,13 +41,12 @@ class CityController extends Controller
         $form = $this->createForm(CityType::class, $city);
         $form->handleRequest($request);
 
-        // Les assert vont s'occuper de gérer la validité des données.
         if($form->isValid()){
             $em = $this->getDoctrine()->getManager();
             $em->persist($city);
             $em->flush();
 
-            return  new JsonResponse(['name' => $city->getName() ]);
+            return  new JsonResponse(['name' => $city->getName(), 'id' => $city->getId() ]);
         }
 
         return new JsonResponse($form->getErrors(true)[0]->getMessage(), 400);
@@ -69,6 +66,19 @@ class CityController extends Controller
         $form = $this->createForm(CityType::class, $city);
 
         return $this->render('DavidBundle:City:form.html.twig',[ 'form' => $form->createView()]);;
+    }
+
+    /**
+     * @Route("/city/remove/{id}", name="city_delete")
+     */
+    public function removeAction(Request $request, $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $ville = $em->getRepository('DavidBundle:City')->find($id);
+        $em->remove($ville);
+        $em->flush();
+
+        return new JsonResponse([], 200);
     }
 
 }
